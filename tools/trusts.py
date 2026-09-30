@@ -154,6 +154,9 @@ def main():
         row["family_trust_parcels"] = t - c.get("kind_land", 0)
         row["family_trust_residential_parcels"] = c.get("trust_residential", 0) - c.get("res_kind_land", 0)
         row["family_trust_homestead_parcels"] = c.get("trust_homestead", 0) - c.get("hx_kind_land", 0)
+        fam, hxf = c.get("trust_residential", 0) - c.get("res_kind_land", 0), c.get("trust_homestead", 0) - c.get("hx_kind_land", 0)
+        # Broward and Palm Beach record the homestead on few trust-held homes (3% and 9% against 44% to 71% elsewhere).
+        row["homestead_on_roll"] = "floor" if fam >= 10000 and hxf / fam < 0.2 else "recorded"
         row["pct_residential_in_family_trust"] = round(100 * row["family_trust_residential_parcels"] / c["residential"], 2) if c.get("residential") else 0
         # Some property appraisers write the owner's own name with no trustee designation (Manatee, for one,
         # writes a bare personal name), and FIDU_NAME/FIDU_CD are empty statewide, so the name test cannot see

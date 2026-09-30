@@ -72,6 +72,6 @@ Six county rolls record the owner's own name with no trustee designation, so the
 | Gadsden | 0.84% |
 | Citrus | 0.92% |
 
-Manatee shows 552 homes in a family trust against 38,308 in neighboring Sarasota. The six counties hold 578,262 residential parcels, At the 61-county rate of 6.26% they would hold about 36,000 homes in a family trust rather than the 2,939 counted, which would add about 33,000 to the statewide count. That estimate is an illustration, not a figure in the data.
+Manatee shows 552 homes in a family trust against 38,308 in neighboring Sarasota.
 
-The homestead counts in Broward (754 of 21,702 homes in a family trust, 3%) and Palm Beach (2,618 of 30,446, 9%) are far below the 44% to 71% seen in every other county with more than 10,000 homes in a family trust, which points to a recording difference rather than a real one. Read those two homestead counts as a floor.
+The homestead counts in Broward (754 of 21,702 homes in a family trust, 3%) and Palm Beach (2,618 of 30,446, 9%) are far below the 44% to 71% seen in every other county with more than 10,000 homes in a family trust, which points to a recording difference rather than a real one. Read those two homestead counts as a floor; the column `homestead_on_roll` marks them `floor`.
