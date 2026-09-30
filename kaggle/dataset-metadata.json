@@ -1,0 +1,161 @@
+{
+  "title": "Florida Homes Held in Trust by County, 2026",
+  "subtitle": "Trust-owned parcels, homesteads and land trusts from the 2026 FL tax roll",
+  "id": "stepuplaw/florida-homes-in-trust-2026",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "keywords": [
+    "law",
+    "real estate",
+    "finance",
+    "government",
+    "united states"
+  ],
+  "description": "For each of Florida's 67 counties, this dataset counts the real property parcels held in trust on the 2026 Florida Department of Revenue NAL property roll. It gives residential and homestead counts, just value, the kind of trust the owner name states (revocable, irrevocable, testamentary, land trust or unstated), whether one trustee or several are named, and land trusts separately from family trusts. Banks, companies and public bodies named as trustee are excluded.\n\nStatewide, 600,542 residential parcels are held in trust (6.11% of 9,830,053), with a just value of $347.5 billion. 582,392 are in a family trust and 18,150 in a land trust. 270,615 trust parcels carry a homestead exemption. Collier leads at 19.15% of residential parcels in a family trust, followed by Sarasota, Lee, Indian River and Sumter.\n\nLimits. The classification reads the owner name only, never the trust document. The name field is short and often truncated, so about 78% of trust parcels do not state revocable or irrevocable. Six counties (Alachua, Manatee, Baker, Clay, Gadsden and Citrus) record owner names without the trustee designation and undercount trusts; they are flagged in trust_designation_on_roll, and the statewide totals include them, so the true statewide figure is somewhat higher. Homestead means the parcel shows a homestead exemption value on the roll. The roll is the 2026 preliminary roll, except Citrus, which is final. Aggregates only, no owner names.\n\nCanonical page and citation: https://stepuplaw.com/data/florida-homes-held-in-trust/\nSource repository with the build script and findings: https://github.com/stepuplaw/florida-homes-in-trust-dataset\nAuthor: Kevin D. Klagge, Klagge Law, PLLC, ORCID https://orcid.org/0009-0002-1385-8498\n\nThis is reference data, not legal advice.",
+  "resources": [
+    {
+      "path": "trusts_by_county.csv",
+      "description": "One row per Florida county, 67 rows",
+      "schema": {
+        "fields": [
+          {
+            "name": "county",
+            "description": "County name (67 Florida counties)",
+            "type": "string"
+          },
+          {
+            "name": "parcels",
+            "description": "All real property parcels on the county roll",
+            "type": "integer"
+          },
+          {
+            "name": "trust_parcels",
+            "description": "Parcels whose owner name identifies a trust or a trustee, after excluding banks, companies and public bodies named as trustee. Includes land trusts",
+            "type": "integer"
+          },
+          {
+            "name": "pct_parcels_in_trust",
+            "description": "trust_parcels as a percentage of parcels",
+            "type": "number"
+          },
+          {
+            "name": "trust_just_value",
+            "description": "Sum of just (market) value on the roll for trust_parcels, in US dollars",
+            "type": "integer"
+          },
+          {
+            "name": "residential_parcels",
+            "description": "Parcels with a Department of Revenue residential use code, 000 to 009 except 003 (vacant residential land, single family, mobile home, condominium, cooperative, retirement home, multifamily under 10 units and residential common elements)",
+            "type": "integer"
+          },
+          {
+            "name": "trust_residential_parcels",
+            "description": "Residential parcels held in trust, land trusts included",
+            "type": "integer"
+          },
+          {
+            "name": "pct_residential_in_trust",
+            "description": "trust_residential_parcels as a percentage of residential_parcels",
+            "type": "number"
+          },
+          {
+            "name": "trust_homestead_parcels",
+            "description": "Trust parcels showing a homestead exemption value on the roll (JV_HMSTD greater than zero)",
+            "type": "integer"
+          },
+          {
+            "name": "kind_revocable",
+            "description": "Trust parcels whose owner name says revocable or living trust",
+            "type": "integer"
+          },
+          {
+            "name": "kind_irrevocable",
+            "description": "Trust parcels whose owner name says irrevocable",
+            "type": "integer"
+          },
+          {
+            "name": "kind_testamentary",
+            "description": "Trust parcels whose owner name says testamentary",
+            "type": "integer"
+          },
+          {
+            "name": "kind_land",
+            "description": "Land trusts (named land trust, numbered trust, or a title or land trust service company as trustee)",
+            "type": "integer"
+          },
+          {
+            "name": "kind_unstated",
+            "description": "Trust parcels whose owner name does not say what kind of trust it is",
+            "type": "integer"
+          },
+          {
+            "name": "trustees_single",
+            "description": "Owner name shows one trustee",
+            "type": "integer"
+          },
+          {
+            "name": "trustees_joint",
+            "description": "Owner name shows two or more trustees",
+            "type": "integer"
+          },
+          {
+            "name": "trustees_trust_named",
+            "description": "The trust itself is written as owner, with no trustee word",
+            "type": "integer"
+          },
+          {
+            "name": "land_numbered",
+            "description": "Land trusts identified by a trust number",
+            "type": "integer"
+          },
+          {
+            "name": "land_named",
+            "description": "Land trusts identified by the words land trust",
+            "type": "integer"
+          },
+          {
+            "name": "land_corporate_trustee",
+            "description": "Land trusts with a title company or land trust service company as trustee",
+            "type": "integer"
+          },
+          {
+            "name": "family_trust_parcels",
+            "description": "trust_parcels minus land trusts",
+            "type": "integer"
+          },
+          {
+            "name": "family_trust_residential_parcels",
+            "description": "trust_residential_parcels minus land trusts",
+            "type": "integer"
+          },
+          {
+            "name": "family_trust_homestead_parcels",
+            "description": "trust_homestead_parcels minus land trusts",
+            "type": "integer"
+          },
+          {
+            "name": "pct_residential_in_family_trust",
+            "description": "family_trust_residential_parcels as a percentage of residential_parcels",
+            "type": "number"
+          },
+          {
+            "name": "trust_designation_on_roll",
+            "description": "recorded, or unreliable where the county roll writes the owner name without the trustee designation, so trusts are undercounted. Rule: pct_residential_in_family_trust below 1.0",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "path": "trusts_statewide.json",
+      "description": "Statewide totals and breakdowns"
+    },
+    {
+      "path": "schema.json",
+      "description": "Column dictionary"
+    }
+  ]
+}

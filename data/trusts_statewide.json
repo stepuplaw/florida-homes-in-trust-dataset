@@ -1,0 +1,59 @@
+{
+ "source": "Florida Department of Revenue 2026 NAL real property roll (66 counties preliminary, Citrus final)",
+ "built": "2026-09-30",
+ "parcels": 11090196,
+ "trust_parcels": 651646,
+ "pct_parcels_in_trust": 5.88,
+ "trust_just_value": 374455750881,
+ "residential_parcels": 9830053,
+ "trust_residential_parcels": 600542,
+ "pct_residential_in_trust": 6.11,
+ "trust_residential_just_value": 347549174288,
+ "trust_homestead_parcels": 270615,
+ "excluded_institutional_trustee_parcels": 4911,
+ "kind": {
+  "revocable": 118647,
+  "irrevocable": 3598,
+  "testamentary": 115,
+  "land": 20880,
+  "unstated": 508406
+ },
+ "kind_residential": {
+  "revocable": 111258,
+  "irrevocable": 3339,
+  "testamentary": 58,
+  "land": 18150,
+  "unstated": 467737
+ },
+ "kind_homestead": {
+  "revocable": 51199,
+  "irrevocable": 594,
+  "testamentary": 9,
+  "land": 1984,
+  "unstated": 216829
+ },
+ "trustees": {
+  "single": 273507,
+  "joint": 98136,
+  "trust_named": 280003
+ },
+ "land": {
+  "land_numbered": 6759,
+  "land_named": 13585,
+  "land_corporate_trustee": 536
+ },
+ "land_residential": {
+  "land_numbered": 5984,
+  "land_named": 11711,
+  "land_corporate_trustee": 455
+ },
+ "land_homestead": {
+  "land_numbered": 986,
+  "land_named": 962,
+  "land_corporate_trustee": 36
+ },
+ "family_trust_parcels": 630766,
+ "family_trust_residential_parcels": 582392,
+ "family_trust_homestead_parcels": 268631,
+ "limits": "Classified from the owner NAME on the roll, which is short and often truncated; a trust whose name does not say revocable or irrevocable is counted as unstated. Banks, companies and public bodies named as trustee (mortgage-securitization trusts, boards of trustees, conservation and housing trusts) are excluded and counted separately."
+}

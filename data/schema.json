@@ -1,0 +1,136 @@
+{
+ "fields": [
+  {
+   "name": "county",
+   "type": "string",
+   "description": "County name (67 Florida counties)"
+  },
+  {
+   "name": "parcels",
+   "type": "integer",
+   "description": "All real property parcels on the county roll"
+  },
+  {
+   "name": "trust_parcels",
+   "type": "integer",
+   "description": "Parcels whose owner name identifies a trust or a trustee, after excluding banks, companies and public bodies named as trustee. Includes land trusts"
+  },
+  {
+   "name": "pct_parcels_in_trust",
+   "type": "number",
+   "description": "trust_parcels as a percentage of parcels"
+  },
+  {
+   "name": "trust_just_value",
+   "type": "integer",
+   "description": "Sum of just (market) value on the roll for trust_parcels, in US dollars"
+  },
+  {
+   "name": "residential_parcels",
+   "type": "integer",
+   "description": "Parcels with a Department of Revenue residential use code, 000 to 009 except 003 (vacant residential land, single family, mobile home, condominium, cooperative, retirement home, multifamily under 10 units and residential common elements)"
+  },
+  {
+   "name": "trust_residential_parcels",
+   "type": "integer",
+   "description": "Residential parcels held in trust, land trusts included"
+  },
+  {
+   "name": "pct_residential_in_trust",
+   "type": "number",
+   "description": "trust_residential_parcels as a percentage of residential_parcels"
+  },
+  {
+   "name": "trust_homestead_parcels",
+   "type": "integer",
+   "description": "Trust parcels showing a homestead exemption value on the roll (JV_HMSTD greater than zero)"
+  },
+  {
+   "name": "kind_revocable",
+   "type": "integer",
+   "description": "Trust parcels whose owner name says revocable or living trust"
+  },
+  {
+   "name": "kind_irrevocable",
+   "type": "integer",
+   "description": "Trust parcels whose owner name says irrevocable"
+  },
+  {
+   "name": "kind_testamentary",
+   "type": "integer",
+   "description": "Trust parcels whose owner name says testamentary"
+  },
+  {
+   "name": "kind_land",
+   "type": "integer",
+   "description": "Land trusts (named land trust, numbered trust, or a title or land trust service company as trustee)"
+  },
+  {
+   "name": "kind_unstated",
+   "type": "integer",
+   "description": "Trust parcels whose owner name does not say what kind of trust it is"
+  },
+  {
+   "name": "trustees_single",
+   "type": "integer",
+   "description": "Owner name shows one trustee"
+  },
+  {
+   "name": "trustees_joint",
+   "type": "integer",
+   "description": "Owner name shows two or more trustees"
+  },
+  {
+   "name": "trustees_trust_named",
+   "type": "integer",
+   "description": "The trust itself is written as owner, with no trustee word"
+  },
+  {
+   "name": "land_numbered",
+   "type": "integer",
+   "description": "Land trusts identified by a trust number"
+  },
+  {
+   "name": "land_named",
+   "type": "integer",
+   "description": "Land trusts identified by the words land trust"
+  },
+  {
+   "name": "land_corporate_trustee",
+   "type": "integer",
+   "description": "Land trusts with a title company or land trust service company as trustee"
+  },
+  {
+   "name": "family_trust_parcels",
+   "type": "integer",
+   "description": "trust_parcels minus land trusts"
+  },
+  {
+   "name": "family_trust_residential_parcels",
+   "type": "integer",
+   "description": "trust_residential_parcels minus land trusts"
+  },
+  {
+   "name": "family_trust_homestead_parcels",
+   "type": "integer",
+   "description": "trust_homestead_parcels minus land trusts"
+  },
+  {
+   "name": "pct_residential_in_family_trust",
+   "type": "number",
+   "description": "family_trust_residential_parcels as a percentage of residential_parcels"
+  },
+  {
+   "name": "trust_designation_on_roll",
+   "type": "string",
+   "description": "recorded, or unreliable where the county roll writes the owner name without the trustee designation, so trusts are undercounted. Rule: pct_residential_in_family_trust below 1.0",
+   "constraints": {
+    "enum": [
+     "recorded",
+     "unreliable"
+    ]
+   }
+  }
+ ],
+ "primaryKey": "county"
+}
