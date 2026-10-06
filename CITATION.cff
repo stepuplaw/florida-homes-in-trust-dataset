@@ -12,6 +12,7 @@ date-released: "2026-09-30"
 license: CC-BY-4.0
 url: "https://stepuplaw.com/data/florida-homes-held-in-trust/"
 repository-code: "https://github.com/stepuplaw/florida-homes-in-trust-dataset"
+doi: 10.5281/zenodo.23199496
 abstract: "For each of Florida's 67 counties, the number of real property parcels held in trust on the 2026 Florida Department of Revenue NAL property roll, with residential and homestead counts, just value, the kind of trust the owner name states (revocable, irrevocable, testamentary, land trust or unstated), single or joint trustees, and land trusts reported separately from family trusts. Banks, companies and public bodies named as trustee are excluded. Classified from the owner name only; six counties whose rolls omit the trustee designation are flagged as undercounting. Aggregates only, no owner names."
 keywords:
   - Florida

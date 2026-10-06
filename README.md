@@ -1,5 +1,7 @@
 # Florida Homes Held in Trust, by County (2026)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23199496.svg)](https://doi.org/10.5281/zenodo.23199496)
+
 How many Florida homes are owned by a trust, county by county, read from the 2026 Florida Department of Revenue property roll. For each of Florida's 67 counties the dataset counts the parcels whose recorded owner is a trust or a trustee, how many of them are residential, how many carry a homestead exemption, what the owner name says about the kind of trust (revocable, irrevocable, testamentary or land trust), and whether one trustee or several are named. Land trusts are counted separately from family trusts, and banks, companies and public bodies acting as trustee are excluded.
 
 Compiled by [Kevin D. Klagge, Esq.](https://stepuplaw.com/about), a Florida estate planning attorney (Klagge Law, PLLC). Built on September 30, 2026. The data holds counts and dollar totals only. No owner name, address or parcel number is published.
